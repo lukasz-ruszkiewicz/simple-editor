@@ -11,3 +11,56 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+
+.editor-form
+{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,0fr);
+  row-gap:10px;
+  column-gap:1px;
+  grid-template-areas: "header header header header"
+        "input input input input"
+        ". . button--load button--save";
+
+  &__input
+  {
+    grid-area:input;
+    min-height: 200px;
+    min-width: 400px;
+  }
+  &__header
+  {
+    grid-area:header;
+    margin: 50px;
+  }
+  &__button
+  {
+    
+    &--load
+    {
+      max-width: 50px;
+      max-height:50px;
+      grid-area:button--load;
+      background-color:blue;
+      color:white;
+      border-style: none;
+    }
+    &--save
+    {
+      max-width: 50px;
+      max-height:50px;
+      grid-area:button--save;
+      background-color:green;
+      color:white;
+      border-style: none;
+    }
+
+    
+  }
+  
+
+
+}
+
